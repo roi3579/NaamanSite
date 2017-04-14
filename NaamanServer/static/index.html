@@ -39,7 +39,44 @@
             <h2>נעמן סוכנות לביטוח</h2>
             <p>נעמן סוכנות לביטוח קיימת כבר כ 20 שנה ומתמחה במגוון ביטוחים החל מאלמנטרי, פנסיה, חיים וכו'.</p>
             <p>אנחנו בנעמן סוכנות לביטוח מאמינים במבוטח במרכז</p>
+
+            <!-- #region Jssor Slider Begin -->
+            <div id="jssor_1" class="jssor_1">
+            <!-- Loading Screen -->
+            <div data-u="loading" class="loading">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('static/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
+            <div data-u="slides" class="slides">
+            <div>
+                {% load static %}
+                <img data-u="image" src="{% static "img/family.jpeg" %}" />
+            </div>
+            <div>
+                {% load static %}
+                <img data-u="image" src="{% static "img/stamp.jpeg" %}" />
+            </div>
+            <div>
+                {%load static %}
+                <img data-u="image" src="{% static "img/umbrella.jpeg" %}" />
+            </div>
+            <div>
+                {%load static %}
+                <img data-u="image" src="{% static "img/saving.jpeg" %}" />
+            </div>
+        </div>
+            <!-- Bullet Navigator -->
+            <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+            <!-- Arrow Navigator -->
+            <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
+            <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
+        </div>
+            <!-- #endregion Jssor Slider End -->
+
+    </div>
         <div class="insurance" >
             <h1>ביטוחי רכב:</h1>
             <h3>ביטוח צד ג:</h3>
@@ -57,11 +94,12 @@
     </div>
 
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+{% load static %}
+<script type="text/javascript" src="{% static "js/jquery-2.1.1.min.js" %}" ></script>
 {% load static%}
 <script type="text/javascript" src="{% static "js/materialize.min.js" %}" ></script>
+{% load static %}
+<script src="{% static "js/jssor.slider-23.1.0.min.js" %}" type="text/javascript"></script>
 {% load static%}
 <script type="text/javascript" src="{% static "js/insurance.js" %}" ></script>
 </html>
